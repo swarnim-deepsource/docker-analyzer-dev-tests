@@ -31,7 +31,7 @@ RUN adduser -D -u 1000 runner && mkdir -p /home/runner && chown -R 1000:3000 /ho
 
 USER root
 
-# new env issue here
+# New env issue here
 ENV FOO=bar \
     BAZ=${FOO}/bla
 
