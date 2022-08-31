@@ -14,17 +14,13 @@ RUN apk update
 RUN apk add --no-cache git
 RUN apk add --upgrade --no-cache bash curl musl openssh openssh-client gcc build-base
 
-### Application ###
 RUN mkdir /app /code
 
-# Copy the code
 COPY . /code
 WORKDIR /code
 
-### Toolbox ###
 RUN mkdir /toolbox
 
-# Set permissions and create user to run analyzers
 RUN chmod -R o-rwx /code /toolbox
 RUN chown -R 1000:3000 /toolbox /code
 RUN adduser -D -u 1000 runner && mkdir -p /home/runner && chown -R 1000:3000 /home/runner
@@ -49,8 +45,6 @@ RUN yum install -y httpd-2.24.2
 
 # Copy the builds
 COPY --from=builder /app /app # skipcq: DOK-DL3023, DOK-DL3021
-
-## Phase: Analyzer
 
 # Install hadolint
 RUN wget -O /toolbox/hadolint https://github.com/hadolint/hadolint/releases/download/v1.17.2/hadolint-Linux-x86_64
