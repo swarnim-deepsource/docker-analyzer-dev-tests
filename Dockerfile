@@ -6,8 +6,8 @@ ARG REGISTRY_NAME
 FROM golang:1.18.3-alpine3.16 AS builder
 
 # Necessary dependencies
-RUN echo "https://mirror.csclub.uwaterloo.ca/alpine/v3.15/main" >/etc/apk/repositories
-RUN echo "https://mirror.csclub.uwaterloo.ca/alpine/v3.15/community" >>/etc/apk/repositories
+RUN echo "https://mirror.csclub.uwaterloo.ca/alpine/v3.16/main" >/etc/apk/repositories
+RUN echo "https://mirror.csclub.uwaterloo.ca/alpine/v3.16/community" >>/etc/apk/repositories
 RUN apk update
 
 # apk add
