@@ -37,6 +37,7 @@ USER root
 ENV FOO=bar \
     BAZ=${FOO}/bla
 
+
 # Necessary dependencies
 RUN echo "https://dl-cdn.alpinelinux.org/alpine/v3.16/main" >/etc/apk/repositories
 RUN echo "https://dl-cdn.alpinelinux.org/alpine/v3.16/community" >>/etc/apk/repositories
