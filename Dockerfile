@@ -3,7 +3,7 @@
 ARG MARVIN_VERSION
 ARG REGISTRY_NAME
 
-FROM golang:1.18.9-alpine3.16 AS builder
+FROM golang:1.18.3-alpine3.16 AS builder
 
 # Necessary dependencies
 RUN echo "https://mirror.csclub.uwaterloo.ca/alpine/v3.15/main" >/etc/apk/repositories
