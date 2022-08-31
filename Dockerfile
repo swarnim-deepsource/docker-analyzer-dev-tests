@@ -23,10 +23,8 @@ RUN mkdir /app /code
 COPY . /code
 WORKDIR /code
 
-
 ### Toolbox ###
 RUN mkdir /toolbox
-
 
 # Set permissions and create user to run analyzers
 RUN chmod -R o-rwx /code /toolbox
