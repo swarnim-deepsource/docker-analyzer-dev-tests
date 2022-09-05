@@ -13,7 +13,6 @@ RUN apk update
 # apk add
 RUN apk add --no-cache git
 RUN apk add --upgrade --no-cache bash curl musl openssh openssh-client gcc build-base
-
 RUN mkdir /app /code
 
 COPY . /code
