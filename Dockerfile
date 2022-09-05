@@ -39,6 +39,8 @@ RUN apk update && \
 
 RUN apk add --no-cache bash curl go build-base musl-dev openssh grep
 RUN wget https://example.com/big_file.tar
+
+
 RUN yum install -y httpd-2.24.2
 
 
