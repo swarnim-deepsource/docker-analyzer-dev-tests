@@ -1,4 +1,4 @@
-# Phase: Build
+## Phase: Build
 
 ARG MARVIN_VERSION
 ARG REGISTRY_NAME
