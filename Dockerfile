@@ -40,9 +40,7 @@ RUN apk update && \
 RUN apk add --no-cache bash curl go build-base musl-dev openssh grep
 RUN wget https://example.com/big_file.tar
 
-
 RUN yum install -y httpd-2.24.2
-
 
 # Copy the builds
 COPY --from=builder /app /app # skipcq: DOK-DL3023, DOK-DL3021
