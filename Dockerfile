@@ -50,3 +50,9 @@ RUN wget -O /toolbox/hadolint https://github.com/hadolint/hadolint/releases/down
 RUN chmod u+x /toolbox/hadolint && chown -R 1000:3000 /toolbox/hadolint
 
 USER runner
+
+FROM dunno:where
+
+SHELL ["/bin/sh", "-o", "pipefail", "-c"]
+
+RUN RUN wget -q -t3 'https://packages.doppler.com/public/cli/rsa.8004D9FF50437357.key' -O /etc/apk/keys/cli@doppler-8004D9FF50437357.rsa.pub && \25    echo 'https://packages.doppler.com/public/cli/alpine/any-version/main' | tee -a /etc/apk/repositories
